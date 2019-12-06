@@ -22,12 +22,28 @@ Dialog DLL:      TCM.DLL V1.35.1.0
  
 <h2>Project:</h2>
 C:\Users\Кирилл\Documents\GitHub\DZ_CMSIS\lab1.uvprojx
-Project File Date:  10/25/2019
+Project File Date:  11/30/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\program files\ARM\ARMCC\Bin'
 Build target 'Target 1'
-".\Objects\lab1.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+main.h(9): warning:  #1295-D: Deprecated declaration delay - give arg types
+  void delay();
+main.c(122): warning:  #223-D: function "sprintf" declared implicitly
+  				sprintf(str,"Klynkin,IU4-71");
+main.c(144): warning:  #223-D: function "sscanf" declared implicitly
+  		sscanf(RxBuffer,"%d",&counter);
+main.c(146): warning:  #186-D: pointless comparison of unsigned integer with zero
+  			if ((0<=counter)&&(counter<=9))
+main.c(160): warning:  #223-D: function "sprintf" declared implicitly
+  		sprintf(str,"counter= %d", counter-1);
+main.c(116): warning:  #177-D: variable "F"  was declared but never referenced
+  	float F;
+main.c: 6 warnings, 0 errors
+linking...
+Program Size: Code=5220 RO-data=592 RW-data=12 ZI-data=2404  
+".\Objects\lab1.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -44,7 +60,7 @@ Package Vendor: Keil
    * Component: Startup Version: 1.0.0
 
 <h2>Collection of Component include folders:</h2>
-  .\RTE\Device\STM32F103C8
+  .\RTE\Device\STM32F100RB
   .\RTE\_Target_1
   D:\program files\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
   D:\program files\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include
@@ -54,11 +70,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.1.2
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
-      Include file:  RTE_Driver\Config\RTE_Device.h
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
       Source file:   Device\Source\system_stm32f10x.c
-Build Time Elapsed:  00:00:00
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\startup_stm32f10x_md_vl.s
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>
